@@ -12,7 +12,10 @@ public class MilkReservoir {
     }
     //наливаем молоко в стакан
     public void pourMilk(boolean milkIsNeeded, int amountOfMilkToPour){
-        if(milkIsNeeded){
+        if(milkIsNeeded && amountOfMilkToPour>amountOfMilk){
+            System.out.println("Не хватает молока, добавьте "+amountOfMilk+" мл. молока");
+            amountOfMilk = 0;
+        } else if(milkIsNeeded){
             System.out.println("Наливаю "+amountOfMilkToPour+" мл. молока");
             amountOfMilk = amountOfMilk - amountOfMilkToPour;
         }else {
