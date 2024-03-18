@@ -10,9 +10,11 @@ public class MilkReservoir {
             amountOfMilk = amountOfMilk + amountOfMilkToPourIntoTheReservoir;
         }
     }
+    //наливаем молоко в стакан
     public void pourMilk(boolean milkIsNeeded, int amountOfMilkToPour){
         if(milkIsNeeded){
             System.out.println("Наливаю "+amountOfMilkToPour+" мл. молока");
+            amountOfMilk = amountOfMilk - amountOfMilkToPour;
         }else {
             System.out.println("Молоко не нужно");
         }
