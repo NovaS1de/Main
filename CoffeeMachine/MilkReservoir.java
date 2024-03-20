@@ -1,4 +1,12 @@
 public class MilkReservoir {
+    public MilkReservoir(int volumeOfTheReservoir, int amountOfMilk){
+        this.volumeOfTheReservoir = volumeOfTheReservoir;
+        this.amountOfMilk = amountOfMilk;
+        if(volumeOfTheReservoir<amountOfMilk){
+            amountOfMilk = volumeOfTheReservoir;
+            System.out.println("Вы перелили молоко. Теперь количество молока = "+volumeOfTheReservoir);
+        }
+    }
     boolean milkIsNeeded;
     int amountOfMilk;
     int volumeOfTheReservoir;
